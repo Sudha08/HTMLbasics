@@ -1,0 +1,1 @@
+alert('Hey, welcome to the website of The Avengers');
