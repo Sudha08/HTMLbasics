@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<style>
+#mybatdiv {
+  font-size:60px;
+}
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+<div id="mybatdiv" class="fa"></div>
+
+<script>
+
+function animation_charging_battery() {
+  var battery;
+  battery = document.getElementById("mybatdiv");
+  battery.innerHTML = "&#xf244;";
+
+  setTimeout(function () {
+      battery.innerHTML = "&#xf243;";
+    },2000);
+
+  setTimeout(function () {
+      battery.innerHTML = "&#xf242;";
+    }, 4000);
+
+  setTimeout(function () {
+      battery.innerHTML = "&#xf241;";
+    }, 6000);
+
+  setTimeout(function () {
+      battery.innerHTML = "&#xf240;";
+    }, 8000);
+}
+
+animation_charging_battery();
+setInterval(animation_charging_battery, 10000);
+</script>
+
+<div><h2>Animating a Battery Icon</h2></div>
+</body>
+</html>

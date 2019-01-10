@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">    
+    <title>Animation Repeating Tile Background</title>
+    <style>
+        body {
+            margin: 48px;
+            background: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div#banner {
+            width: 1000px;
+            height: 200px;
+            margin: 0px auto;
+            border: green 1px solid;
+            overflow: hidden;
+        }
+        div#banner > #banner-backdrop {
+            position: relative;
+            background: url(video-loop-background3.jpg) repeat-x;
+            width: 1400px;
+            height: 200px;
+            animation: backdrop_roll linear 10s infinite;
+            /* -- use the webkit keyword for older versions of chrome & safari 
+            -webkit-animation: backdrop_roll linear 10s infinite; 
+            */
+        }
+
+        @keyframes backdrop_roll {
+            from {right: 0px;}
+            to {right: 400px;}
+        }
+
+        /* @-webkit-keyframes backdrop_roll {
+            from {right: 0px;}
+            to {right: 400px;}
+        } */
+
+        div#banner > #banner-content {
+            position: relative;
+            width: 96%;
+            height: 160px;
+            margin: 80px auto;
+            top: -200px;
+            color: white;
+            font-size: 27px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <div id="banner-backdrop"></div>
+        <div id="banner-content">
+            Put anything you want in this box...
+        </div>
+    </div>    
+</body>
+</html>
